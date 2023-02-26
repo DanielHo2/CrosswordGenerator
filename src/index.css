@@ -1,0 +1,46 @@
+/* CSS Reset / Global Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Setting global font to 62.5% which sets 1rem = 10px */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  background-color: var(--color-white);
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  /* font-family: 'Raleway Dots', cursive; */
+}
+
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+:root {
+  --bar-height: 70px;
+  --color-accent: #444;
+  --color-green: #34d596;
+  --color-navy: #2e395d;
+  --color-light-blue-bg: #f7fbff;
+  --color-grey-text: #9d9fab;
+  --color-dark-purple: #1b1464;
+  --color-dark-blue: #1c3482;
+  --color-blue: #0c3aca;
+  --color-light-blue: #1652d6;
+  --color-black: #090b17;
+  --color-white: #ffffff;
+  --color-light-grey: #f4f6f8;
+  --color-medium-grey: #999;
+  --color-dark-grey: #090b17;
+
+  --gradient-primary: linear-gradient(to right, var(--color-purple), var(--color-dark-purple));
+  --gradient-secondary: linear-gradient(to top left, var(--color-dark-blue), var(--color-blue), var(--color-light-blue-blue));
+}
