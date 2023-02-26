@@ -48,7 +48,9 @@ const Header = () => {
               Generated Crossword
             </a>
             <a className="btn-green" href="#contact">
+              <Link className="nav__link" to={"/login"}>
               Login
+              </Link>
             </a>
           </nav>
         </div>

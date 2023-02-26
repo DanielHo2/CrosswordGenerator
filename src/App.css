@@ -569,3 +569,43 @@ color: var(--color-white);
   color: var(--color-green);
   border: 2px solid var(--color-green);
 }
+
+/* Login Section */
+.login {
+  padding: 16rem 8rem 10rem 8rem;
+}
+
+.text-danger{
+  color: red;
+}
+
+.login-form {
+  margin-bottom: 4rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 15px 20px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.email-login {
+  display: flex;
+  flex-direction: column;
+}
+.email-login label {
+  color: rgb(170 166 166);
+  font-size: large;
+}
+
+.signup__link{
+  color: var(--color-blue);
+  text-align: center;
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
