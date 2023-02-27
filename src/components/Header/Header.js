@@ -31,8 +31,10 @@ const Header = () => {
                 About
               </Link>
             </a>
-            <a className="nav__link" href="#pricing">
+            <a className="nav__link">
+              <Link className="nav__link" to={"/stats"}>
               Stats
+              </Link>
             </a>
 
             <a className="nav__link">

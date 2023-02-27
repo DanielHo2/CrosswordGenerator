@@ -62,7 +62,7 @@ const About = () => {
             <div class="services-card">
               <div class="services-card-image">
                 <img
-                  src="img/robot.png"
+                  src={RobotImg}
                   alt="Logo Genius Logo Design Service"
                 />
               </div>
