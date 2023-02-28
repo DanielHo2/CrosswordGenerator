@@ -11,10 +11,9 @@ const About = () => {
             <h4>Behind the scenes of the crossword generator</h4>
             <h2>Why We Created This</h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
-              non tempora aliquid ullam! Beatae temporibus voluptatum, explicabo
-              quo provident necessitatibus enim suscipit quibusdam adipisci
-              reprehenderit. Iure aperiam laboriosam accusamus aut.
+              To play a crossword puzzle you either have to play one made by someone else
+              or make one yourself. With the capabilities of today's technology we ponder the question:
+              Why can't crossword puzzles be automatically generated?
             </p>
             <div class="about-button">
               <a href="#" class="btn-green">
@@ -52,8 +51,8 @@ const About = () => {
                 <h3>02. Design</h3>
                 <div class="services-item">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusantium, aut qui!
+                    With a proprietary algorithm, we are able to generate a crossword puzzle
+                    with related words chosen based off of your selected keyword!
                   </p>
                 </div>
               </div>
