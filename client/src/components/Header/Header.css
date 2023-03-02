@@ -1,0 +1,244 @@
+:root {
+    --bar-height: 70px;
+    --color-accent: #444;
+    --color-green: #34d596;
+    --color-navy: #2e395d;
+    --color-light-blue-bg: #f7fbff;
+    --color-grey-text: #9d9fab;
+    --color-dark-purple: #1b1464;
+    --color-dark-blue: #1c3482;
+    --color-blue: #0037ce;
+    --color-light-blue: #1652d6;
+    --color-black: #090b17;
+    --color-white: #ffffff;
+    --color-light-grey: #f4f6f8;
+    --color-medium-grey: #999;
+    --color-dark-grey: #090b17;
+
+    --gradient-primary: linear-gradient(to right, var(--color-purple), var(--color-dark-purple));
+    --gradient-secondary: linear-gradient(to top left, var(--color-dark-blue), var(--color-blue), var(--color-light-blue-blue));
+}
+/* Bar */
+.bar {
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--bar-height);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    transition: background 0.15s;
+}
+
+.bar--bg {
+    
+    /* background-image: var(--gradient-primary); */
+    /* background-image: url(../img/cw-hero.png); */
+}
+
+.bar__content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-blue);
+}
+
+.bar__logo {
+    /* height: 8rem;
+    width: auto; */
+    height: 65%;
+}
+
+.bar__nav-toggle {
+    cursor: pointer;
+}
+
+.bar__nav-toggle i {
+    background-color: var(--color-secondary);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3rem;
+}
+
+/* Nav */
+#inpNavToggle {
+    display: none;
+}
+
+#inpNavToggle:checked ~ .nav {
+    display: flex;
+}
+
+.nav{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: var(--bar-height);
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* height: calc(100vh - var(--bar-height)); */
+    padding: 32px;
+    background: var(--color-dark-grey);
+    box-sizing: border-box;
+}
+
+.nav__link {
+    color: var(--color-white);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.6;
+    text-decoration: none;
+    padding: 1rem 0;
+}
+
+.nav__link:hover {
+    opacity: 0.8;
+}
+
+.nav .btn-transparent {
+    padding: 1.1rem 1.75rem;
+    margin-right: 1rem;
+}
+
+.nav .btn-purple {
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+    .bar__nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        display: initial;
+        position: static;
+        width: unset;
+        height: unset;
+        padding: unset;
+        background: transparent;
+    }
+
+    .nav__link {
+        border-bottom: none;
+    }
+
+    .nav__link:not(:last-of-type) {
+        margin-right: 2rem;
+    }
+}
+
+/* Bar */
+.bar {
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--bar-height);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    transition: background 0.15s;
+}
+
+.bar--bg {
+    background-color: var(--color-blue);
+    /* background-image: var(--gradient-primary); */
+    /* background-image: url(../img/cw-hero.png); */
+}
+
+.bar__content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar__logo {
+    /* height: 8rem;
+    width: auto; */
+    height: 65%;
+}
+
+.bar__nav-toggle {
+    cursor: pointer;
+}
+
+.bar__nav-toggle i {
+    background-color: var(--color-secondary);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3rem;
+}
+
+/* Nav */
+#inpNavToggle {
+    display: none;
+}
+
+#inpNavToggle:checked ~ .nav {
+    display: flex;
+}
+
+.nav{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: var(--bar-height);
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* height: calc(100vh - var(--bar-height)); */
+    padding: 32px;
+    background: var(--color-dark-grey);
+    box-sizing: border-box;
+}
+
+.nav__link {
+    color: var(--color-white);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.6;
+    text-decoration: none;
+    padding: 1rem 0;
+}
+
+.nav__link:hover {
+    opacity: 0.8;
+}
+
+.nav .btn-transparent {
+    padding: 1.1rem 1.75rem;
+    margin-right: 1rem;
+}
+
+.nav .btn-purple {
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+    .bar__nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        display: initial;
+        position: static;
+        width: unset;
+        height: unset;
+        padding: unset;
+        background: transparent;
+    }
+
+    .nav__link {
+        border-bottom: none;
+    }
+
+    .nav__link:not(:last-of-type) {
+        margin-right: 2rem;
+    }
+}
+
+/* ******************************************************** END OF HEADER SECTION ************************************************************ */
