@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import RobotImg from "../../assets/img/robot.png";
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { googleLogin, useGoogleLogin, googleLogout, GoogleLogin } from '@react-oauth/google';
 import * as z from "zod";
 
 const formSchema = z.object({
@@ -25,6 +26,15 @@ function Login(props) {
 
     };
 
+    const responseGoogle = (res) => {
+        console.log('Failed');
+    }
+    
+    const successLogin = () => {
+        console.log('success');
+        navigate("/", {replace: true});
+    }
+
     return (
         <>
             {/* Login Section  */}
@@ -32,7 +42,11 @@ function Login(props) {
                 <div class="container">
                     <div class="about-box">
                         <h2>Login to your Account</h2>
-                        <div classname="login-form">
+                        <GoogleLogin
+                            onSuccess={successLogin}
+                            onFailure={responseGoogle}
+                        />
+                        {/* <div classname="login-form">
                             <form onSubmit={handleSubmit(loginHandler)}>
                                 <div className="email-login">
                                     <label htmlFor="email">
@@ -61,7 +75,7 @@ function Login(props) {
                                     Create an Account
                                 </Link>
                             </form>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
