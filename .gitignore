@@ -1,2 +1,4 @@
-/node_modules
+node_modules/
 .env
+cc.en.100.bin
+__pycache__/
