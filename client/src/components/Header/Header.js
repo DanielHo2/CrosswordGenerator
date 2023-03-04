@@ -32,12 +32,6 @@ const Header = () => {
               </Link>
             </a>
             <a className="nav__link">
-              <Link className="nav__link" to={"/stats"}>
-              Stats
-              </Link>
-            </a>
-
-            <a className="nav__link">
               <Link className="nav__link" to={"/share"}>
                 Share
               </Link>

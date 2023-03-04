@@ -1,5 +1,7 @@
 import React from "react";
 import RobotImg from "../../assets/img/robot.png";
+import { Link } from "react-router-dom";
+
 
 const About = () => {
   return (
@@ -20,6 +22,47 @@ const About = () => {
                 Make A Crossword
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="members">
+        <div class="container">
+          <div class="members-box">
+            <h4>Team Members</h4>
+            <h2>Who we are</h2>
+            {/* <ul> */}
+            <a className="member__link">
+              <Link className="member__link" to={"/AboutCameron"}>
+                Cameron Evans 
+              </Link>
+            </a>
+            <a className="member__link">
+              <Link className="member__link" to={"/AboutEthan"}>
+                Ethan Haeck
+              </Link>
+            </a>
+            <a className="member__link">
+              <Link className="member__link" to={"/AboutDaniel"}>
+                Daniel Ho
+              </Link>
+            </a>
+            <a className="member__link">
+              <Link className="member__link" to={"/aboutCampbell"}>
+                Campbell Lewis
+              </Link>
+            </a>
+            <a className="member__link">
+              <Link className="member__link" to={"/AboutDAngelo"}>
+                D'Angelo Minnis
+              </Link>
+            </a>
+            <a className="member__link">
+              <Link className="member__link" to={"/AboutPhil"}>
+                Phil Steinke
+              </Link>
+            </a>
+          {/* </ul> */}
           </div>
         </div>
       </section>

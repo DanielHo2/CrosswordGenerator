@@ -1,0 +1,37 @@
+import React from "react";
+import RobotImg from "../../assets/img/robot.png";
+
+const AboutCampbell = () => {
+  return (
+    <>
+      {/* AboutMember Section  */}
+      <section class="aboutMember">
+        <div class="container">
+          
+          <div class="aboutMember-box">
+            <h1>About</h1>
+            
+            <h2>Campbell Lewis</h2>
+            
+            <h3>Generic fluff question number 1</h3>
+            <p>
+              Generic fluff answer number 1
+            </p>
+            <h3>Generic fluff question number 2</h3>
+            <p>
+              Generic fluff answer number 2:
+            </p>
+            <div class="aboutMember-box-image">
+                    <img
+                    src={RobotImg}
+                    alt="Logo Genius Logo Design Service"
+                    />
+            </div>
+          </div>
+        </div>
+      </section>
+      </>
+  );
+}; 
+
+export default AboutCampbell;

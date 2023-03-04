@@ -371,10 +371,56 @@ color: var(--color-white);
   margin-bottom: 2rem;
 }
 
+/* Member Section  */
+.members {
+  padding: 2rem 8rem 10rem 8rem;
+  background: var(--color-light-blue-bg);
+}
+
+.members-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.members-box h4 {
+  color: var(--color-green);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.members-box h2 {
+  color: var(--color-navy);
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.member__link {
+  color: var(--color-dark-grey);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-decoration: none;
+  padding: 1rem 0;
+}
+
+.member__link:hover {
+  opacity: 0.8;
+}
+
+
 /* Services Section */
 .services {
   padding: 12rem 4rem;
-  background: var(--color-light-blue-bg);
+  background: #f2f9ff;
 }
 
 .services-box {
@@ -571,18 +617,18 @@ color: var(--color-white);
 }
 
 /* Stats Section */
-.stats {
+.aboutMember {
   padding: 16rem 8rem 10rem 8rem;
 }
 
-.stats-box {
+.aboutMember-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.stats-box h4 {
+.aboutMember-box h1 {
   color: var(--color-green);
   font-size: 1.75rem;
   font-weight: 600;
@@ -591,7 +637,7 @@ color: var(--color-white);
   margin-bottom: 1rem;
 }
 
-.stats-box h2 {
+.aboutMember-box h2 {
   color: var(--color-navy);
   font-size: 5rem;
   font-weight: 700;
@@ -601,8 +647,17 @@ color: var(--color-white);
   text-align: center;
 }
 
-.stats-box p {
-  color: var(--color-navy);
+.aboutMember-box h3 {
+  color: var(--color-dark-grey);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.aboutMember-box p {
+  color: var(--color-medium-grey);
   font-size: 2.0rem;
   font-weight: 400;
   line-height: 2.2;
@@ -611,7 +666,7 @@ color: var(--color-white);
   text-align: center;
 }
 
-.stats-box-image img {
+.aboutMember-box-image img {
   width: 100px;
   height: auto;
 }
