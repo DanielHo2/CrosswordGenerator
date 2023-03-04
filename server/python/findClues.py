@@ -20,10 +20,12 @@ def getKeys(keyword):
         word = word.upper()
         if word in wordClueDict:
             winners.append({
-                "answer": word,
+                "word": word,
                 "clue": wordClueDict[word],
                 "relevance": relevance
             })
+            if len(winners) > 50:
+                break
     return jsonify(winners)
 
 
