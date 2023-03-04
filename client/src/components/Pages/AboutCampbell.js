@@ -13,11 +13,11 @@ const AboutCampbell = () => {
             
             <h2>Campbell Lewis</h2>
             
-            <h3>Generic fluff question number 1</h3>
+            <h3>What is another project you've worked on that helped you here?</h3>
             <p>
               Generic fluff answer number 1
             </p>
-            <h3>Generic fluff question number 2</h3>
+            <h3>What do you hope to take away from this project?</h3>
             <p>
               Generic fluff answer number 2:
             </p>
