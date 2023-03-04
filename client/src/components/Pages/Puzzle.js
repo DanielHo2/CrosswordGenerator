@@ -63,9 +63,9 @@ function Puzzle(props) {
   return (
     <>
       {/* Puzzle Section  */}
-      <section className="stats">
+      <section className="about">
         <div className="container">
-          <div className="stats-box">
+          <div className="about-box">
             <h1>{TEST_QUERY}</h1>
             <CrosswordPuzzle crossword={crossword} size={SIZE} />
             <ClueList clue_list={test_json.clue_list} clue_data={crossword.clue_data} />

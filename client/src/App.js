@@ -13,6 +13,7 @@ import AboutEthan from "./components/Pages/AboutEthan";
 import AboutPhil from "./components/Pages/AboutPhil";
 import Signup from "./components/Pages/Signup";
 import PageNotFound from "./components/Pages/PageNotFound";
+import Puzzle from "./components/Pages/Puzzle";
 import { Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/aboutCampbell" element={<AboutCampbell />}></Route>
         <Route path="/aboutDAngelo" element={<AboutDAngelo />}></Route>
         <Route path="/aboutPhil" element={<AboutPhil />}></Route>
+        <Route path="/puzzle" element={<Puzzle />}></Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />

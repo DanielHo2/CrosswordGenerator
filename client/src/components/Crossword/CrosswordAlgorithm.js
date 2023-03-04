@@ -19,12 +19,12 @@ export function generateCrossword(MAX_SIZE, word_list) {
     for( let a = 0; a < MAX_SIZE; a++){
         for( let b = 0; b < MAX_SIZE; b++){
             let new_id = false
-            best_puzzle_clue_data.forEach((element, index) => {
-                if ((element.x === a) && (element.y === b)){
-                    best_puzzle_clue_data[index].id = id_count
+            for(let m = 0; m < best_puzzle_clue_data.length; m++){
+                if ((best_puzzle_clue_data[m].x === a) && (best_puzzle_clue_data[m].y === b)){
+                    best_puzzle_clue_data[m].id = id_count
                     new_id = true
                 }
-            });
+            }
             if (new_id){
                 id_count++
             }
