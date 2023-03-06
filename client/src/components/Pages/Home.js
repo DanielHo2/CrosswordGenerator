@@ -4,47 +4,47 @@ import robotImg from "../../assets/img/robot.png";
 const Home = () => {
   return (
     <>
-      <header class="header" id="header">
-        <div class="container">
-          <div class="header-box">
-            <div class="header-text">
+      <header className="header" id="header">
+        <div className="container">
+          <div className="header-box">
+            <div className="header-text">
               <h1>The Crossword Generator</h1>
               <h4>
                 Use our crossword generator to generate the crossword puzzle of
                 your dreams.
               </h4>
             </div>
-            <div class="header-form">
+            <div className="header-form">
               <form name="header" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="header" />
-                <div class="header-item">
+                <div className="header-item">
                   <input
                     type="email"
                     name="Email Address"
                     id=""
-                    class="input"
+                    className="input"
                     placeholder="Enter a keyword"
                     required
                   />
                   <input
                     type="submit"
                     value="Make your puzzle!"
-                    class="btn-submit"
+                    className="btn-submit"
                   />
                 </div>
               </form>
             </div>
-            <div class="header-image">
+            <div className="header-image">
               <img src={robotImg} alt="Fiverr Reviews logogenius5" />
             </div>
           </div>
         </div>
       </header>
       {/* Detail Section */}
-      <section class="detail">
-        <div class="container">
-          <div class="detail-box">
-            <div class="detail-text">
+      <section className="detail">
+        <div className="container">
+          <div className="detail-box">
+            <div className="detail-text">
               <h2>Word Database</h2>
               <p>
                 Utilizing the open-source <i>fast</i>Text library, puzzle answers can
@@ -53,20 +53,20 @@ const Home = () => {
               <p>
                 <i>fast</i>Text even works with 157 languages!
               </p>
-              <div class="detail-button-box">
-                <div class="detail-button">
-                  <a href="#" class="btn-green">
+              <div className="detail-button-box">
+                <div className="detail-button">
+                  <a href="#" className="btn-green">
                     Create
                   </a>
                 </div>
-                <div class="detail-button">
-                  <a href="https://fasttext.cc/" class="btn-blank">
+                <div className="detail-button">
+                  <a href="https://fasttext.cc/" className="btn-blank">
                     Learn More &#8594;
                   </a>
                 </div>
               </div>
             </div>
-            <div class="detail-image">
+            <div className="detail-image">
               <img src={robotImg} alt="" />
             </div>
           </div>
@@ -74,13 +74,13 @@ const Home = () => {
       </section>
 
       {/* Detail 2 Section */}
-      <section class="detail2">
-        <div class="container">
-          <div class="detail2-box">
-            <div class="detail2-image">
+      <section className="detail2">
+        <div className="container">
+          <div className="detail2-box">
+            <div className="detail2-image">
               <img src="img/robot.png" alt="" />
             </div>
-            <div class="detail2-text">
+            <div className="detail2-text">
               <h2>Clues Database</h2>
               <p>
                 We use the cryptics.georgeho.org dataset to get clues for your
@@ -91,14 +91,14 @@ const Home = () => {
                 This dataset includes over <b>half a million</b> clues collected over
                 12 years!
               </p>
-              <div class="detail2-button-box">
-                <div class="detail2-button">
-                  <a href="#" class="btn-green">
+              <div className="detail2-button-box">
+                <div className="detail2-button">
+                  <a href="#" className="btn-green">
                     Create
                   </a>
                 </div>
-                <div class="detail2-button">
-                  <a href="https://cryptics.georgeho.org/" class="btn-blank">
+                <div className="detail2-button">
+                  <a href="https://cryptics.georgeho.org/" className="btn-blank">
                     Learn More &#8594;
                   </a>
                 </div>

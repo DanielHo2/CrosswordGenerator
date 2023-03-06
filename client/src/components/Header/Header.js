@@ -3,7 +3,19 @@ import "./Header.css";
 import fiverrLogo from "../../assets/img/robot.png";
 import cwLogo2 from "../../assets/img/cw-logo-02.png";
 import { Link } from "react-router-dom";
+import { googleLogout } from '@react-oauth/google';
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../Pages/Store/authSlice";
+
 const Header = () => {
+  const dispatch = useDispatch();
+  const {loggedIn} = useSelector(state => state.auth);
+  const logOut = () => {
+    googleLogout();
+    dispatch(logout());
+    localStorage.removeItem("authToken");
+  };
+  
   return (
     <>
       <div className="bar">
@@ -14,7 +26,7 @@ const Header = () => {
             alt="Crossword Generator logo"
           />
           <input type="checkbox" id="inpNavToggle" />
-          <label className="bar__nav-toggle" for="inpNavToggle">
+          <label className="bar__nav-toggle" htmlFor="inpNavToggle">
             <i className="material-icons">menu</i>
           </label>
           <nav className="nav">
@@ -44,9 +56,13 @@ const Header = () => {
               Generated Crossword
             </a>
             <a className="btn-green" href="#contact">
-              <Link className="nav__link" to={"/login"}>
-              Login
-              </Link>
+              {!localStorage.getItem("authToken") ? (
+                <Link className="nav__link" to={"/login"}>
+                  Login
+                </Link>
+              ) : (
+                <button onClick={logOut}>Log out</button>
+              )}
             </a>
           </nav>
         </div>

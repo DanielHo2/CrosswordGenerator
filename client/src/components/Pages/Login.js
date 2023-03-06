@@ -6,6 +6,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { googleLogin, useGoogleLogin, googleLogout, GoogleLogin } from '@react-oauth/google';
 import * as z from "zod";
+import axios from 'axios';
+import { loginStore } from './Store/authSlice';
 
 const formSchema = z.object({
     email: z.string().email("Enter a valid email address"),
@@ -14,9 +16,44 @@ const formSchema = z.object({
 
 function Login(props) {
 
-    const { setUser } = props;
+    const [user, setUser] = useState([]);
+    const [profile, setProfile] = useState([]);
     const navigate = useNavigate();
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
+
+    const login = useGoogleLogin({
+        onSuccess: (codeResponse) => setUser(codeResponse),
+        onError: (error) => console.log('Login Failed:', error)
+    });
+
+    useEffect(
+        () => {
+            if (user) {
+                axios
+                    .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
+                        headers: {
+                            Authorization: `Bearer ${user.access_token}`,
+                            Accept: 'application/json'
+                        }
+                    })
+                    .then((res) => {
+                        setProfile(res.data);
+                        const token = user.access_token;
+                        dispatch(loginStore({token}));
+                        localStorage.setItem("authToken", user.access_token);
+                        navigate("/", {replace: false});
+                    })
+                    .catch((err) => console.log(err));
+            }
+        },
+        [ user ]
+    );
+
+    const logOut = () => {
+        googleLogout();
+        setProfile(null);
+    }
+    //const { setUser } = props;
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: zodResolver(formSchema)
     });
@@ -26,56 +63,27 @@ function Login(props) {
 
     };
 
-    const responseGoogle = (res) => {
-        console.log('Failed');
-    }
+    // const responseGoogle = (res) => {
+    //     console.log('Failed');
+    // }
     
-    const successLogin = () => {
-        console.log('success');
-        navigate("/", {replace: true});
-    }
+    // const successLogin = () => {
+    //     console.log('success');
+    //     navigate("/", {replace: true});
+    // }
 
     return (
         <>
             {/* Login Section  */}
-            <section class="login">
-                <div class="container">
-                    <div class="about-box">
+            <section className="login">
+                <div className="container">
+                    <div className="about-box">
                         <h2>Login to your Account</h2>
-                        <GoogleLogin
+                        <button onClick={() => login()}>Login with Google</button>
+                        {/* <GoogleLogin
                             onSuccess={successLogin}
                             onFailure={responseGoogle}
-                        />
-                        {/* <div classname="login-form">
-                            <form onSubmit={handleSubmit(loginHandler)}>
-                                <div className="email-login">
-                                    <label htmlFor="email">
-                                        {" "}
-                                        <b>Email</b>
-                                    </label>
-                                    <input
-                                        type="text"
-                                        placeholder="name@abc.com"
-                                        {...register("email")}
-                                    />
-                                    {errors.email && <p className="text-danger">{errors.email?.message}</p>}
-                                    <label htmlFor="psw">
-                                        <b>Password</b>
-                                    </label>
-                                    <input
-                                        type="password"
-                                        placeholder="8+ (a, A, 1, #)"
-                                        {...register("password")}
-                                    />
-                                    {errors.password && <p className="text-danger">{errors.password?.message}</p>}
-                                </div>
-                                <button type="submit" className="btn-green">Login</button>
-                                <br></br>
-                                <Link className="signup__link" to="/signup">
-                                    Create an Account
-                                </Link>
-                            </form>
-                        </div> */}
+                        /> */}
                     </div>
                 </div>
             </section>

@@ -5,15 +5,22 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import ScrollToTop from "./components/ScrollToTop";
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { Provider } from "react-redux";
+import {store} from './components/Pages/Store/store';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+  <GoogleOAuthProvider clientId="115810013511-tbagafl7j8nm1tceb4urlf4sue012uuf.apps.googleusercontent.com">
+    <React.StrictMode>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </BrowserRouter>
+    </React.StrictMode>
+  </GoogleOAuthProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
