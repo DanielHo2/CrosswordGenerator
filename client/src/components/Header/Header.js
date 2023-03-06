@@ -31,22 +31,30 @@ const Header = () => {
                 About
               </Link>
             </a>
+            <a className="nav__link" href="#pricing">
+              Stats
+            </a>
+
             <a className="nav__link">
               <Link className="nav__link" to={"/share"}>
                 Share
+              </Link>
+            </a>
+            <a className="nav__link">
+              <Link className="nav__link" to={"/faq"}>
+                FAQ
               </Link>
             </a>
 
             <a className="nav__link" href="#fiverr">
               Support
             </a>
+
             <a className="nav__link" href="#contact">
               Generated Crossword
             </a>
             <a className="btn-green" href="#contact">
-              <Link className="nav__link" to={"/login"}>
               Login
-              </Link>
             </a>
           </nav>
         </div>
