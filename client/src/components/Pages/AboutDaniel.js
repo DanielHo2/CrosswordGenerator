@@ -15,11 +15,11 @@ const AboutDaniel = () => {
             
             <h3>What is another project you've worked on that helped you here?</h3>
             <p>
-              Generic fluff answer number 1
+              One of my internships required work to be completed in React Native, so the work I did there really helped me hit the ground running faster.
             </p>
             <h3>What do you hope to take away from this project?</h3>
             <p>
-              Generic fluff answer number 2:
+              I was hoping to be able to increase my experience with react and create another resume stuffer.
             </p>
             <div class="aboutMember-box-image">
                 <img
