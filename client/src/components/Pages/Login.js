@@ -58,20 +58,6 @@ function Login(props) {
         resolver: zodResolver(formSchema)
     });
 
-    //create login handler
-    const loginHandler = (data) => {
-
-    };
-
-    // const responseGoogle = (res) => {
-    //     console.log('Failed');
-    // }
-    
-    // const successLogin = () => {
-    //     console.log('success');
-    //     navigate("/", {replace: true});
-    // }
-
     return (
         <>
             {/* Login Section  */}
@@ -79,11 +65,8 @@ function Login(props) {
                 <div className="container">
                     <div className="about-box">
                         <h2>Login to your Account</h2>
+                        <h1>Login to your Account</h1>
                         <button onClick={() => login()}>Login with Google</button>
-                        {/* <GoogleLogin
-                            onSuccess={successLogin}
-                            onFailure={responseGoogle}
-                        /> */}
                     </div>
                 </div>
             </section>

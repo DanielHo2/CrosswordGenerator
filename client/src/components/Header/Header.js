@@ -15,7 +15,7 @@ const Header = () => {
     dispatch(logout());
     localStorage.removeItem("authToken");
   };
-  
+
   return (
     <>
       <div className="bar">
@@ -26,7 +26,7 @@ const Header = () => {
             alt="Crossword Generator logo"
           />
           <input type="checkbox" id="inpNavToggle" />
-          <label className="bar__nav-toggle" htmlFor="inpNavToggle">
+          <label className="bar__nav-toggle" for="inpNavToggle">
             <i className="material-icons">menu</i>
           </label>
           <nav className="nav">
@@ -43,20 +43,30 @@ const Header = () => {
                 About
               </Link>
             </a>
+            <a className="nav__link" href="#pricing">
+              Stats
+            </a>
+
             <a className="nav__link">
               <Link className="nav__link" to={"/share"}>
                 Share
+              </Link>
+            </a>
+            <a className="nav__link">
+              <Link className="nav__link" to={"/faq"}>
+                FAQ
               </Link>
             </a>
 
             <a className="nav__link" href="#fiverr">
               Support
             </a>
+
             <a className="nav__link" href="#contact">
               Generated Crossword
             </a>
             <a className="btn-green" href="#contact">
-              {!localStorage.getItem("authToken") ? (
+            {!localStorage.getItem("authToken") ? (
                 <Link className="nav__link" to={"/login"}>
                   Login
                 </Link>

@@ -9,38 +9,81 @@ const Footer = () => {
         <div className="container">
           <div className="footer-box">
             <div className="footer-box-company">
-              <img src={cwLogo2} alt="cwlogo" />
+              <img src={cwLogo2} alt="logo image" />
               <p>
                 This is a crossword generator application that generates
                 crossword puzzles around your keyword.
               </p>
               <p>Copyright © 2023 Crossword Generator - All rights reserved.</p>
+              {/* <!-- Start of Contact Form --> */}
+              <form name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
+                <div className="contact-item">
+                  <h5>Name*</h5>
+                  <input
+                    type="text"
+                    name="First Name"
+                    id=""
+                    className="input"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+                <div className="contact-item">
+                  <h5>Email*</h5>
+                  <input
+                    type="text"
+                    name="First Name"
+                    id=""
+                    className="input"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div className="contact-item">
+                  <h5>Message*</h5>
+                  <textarea
+                    name="Message"
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                </div>
+                <div className="contact-submit">
+                  <div className="contact-button">
+                    <input type="submit" value="Submit" className="btn-green" />
+                  </div>
+                </div>
+              </form>
+              {/* <!-- End of Contact Form --> */}
             </div>
             <div className="footer-box-links">
               <h3>Site Map</h3>
               <ul>
-                <a href="#header">
+                <a href="index.html">
                   <li>Home</li>
                 </a>
-                <a href="#branding">
+                <a href="#">
                   <li>Daily Puzzle</li>
                 </a>
-                <a href="#services">
-                  <li>About</li>
-                </a>
-                <a href="#pricing">
-                  <li>Stats</li>
-                </a>
-                <a href="#fiverr">
-                  <li>Share</li>
-                </a>
-                <a href="#contact">
-                  <li>Support</li>
-                </a>
-                <a href="#contact">
+                <a href="#">
                   <li>Generated Crosswords</li>
                 </a>
-                <a href="#contact">
+                <a href="#">
+                  <li>Stats</li>
+                </a>
+                <a href="about.html">
+                  <li>About</li>
+                </a>
+                <a href="share.html">
+                  <li>Share</li>
+                </a>
+                <a href="#">
+                  <li>Support</li>
+                </a>
+                <a href="#">
                   <li>Login</li>
                 </a>
               </ul>
